@@ -2,8 +2,6 @@ package starter.postcodes;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.RestAssured;
-import net.serenitybdd.rest.SerenityRest;
 import net.thucydides.core.annotations.Steps;
 
 import static net.serenitybdd.rest.SerenityRest.restAssuredThat;
@@ -25,4 +23,5 @@ public class PostCodeStepDefinitions {
         restAssuredThat(response -> response.body(LocationResponse.COUNTRY, equalTo(country)));
         restAssuredThat(response -> response.body(LocationResponse.FIRST_PLACE_NAME, equalTo(placeName)));
     }
+
 }
